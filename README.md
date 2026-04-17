@@ -14,7 +14,6 @@ The LLM maintains an evolving, cross-referenced knowledge base rather than produ
 | `/gt-lab-notes <subcommand>` | Project lab notes: `create`, `add-task`, `do-task`, `done-task`, `note` |
 | `/gt-gen-paper [focus]` | Generate academic paper from findings |
 | `/gt-repo-docs [focus]` | Generate purpose-driven repo documentation |
-| `/gt-supercharge [duration]` | Long-running autonomous agent loop with structured cycles |
 
 ## Wiki structure
 

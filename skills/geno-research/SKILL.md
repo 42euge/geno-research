@@ -4,13 +4,12 @@ description: >-
   Research toolkit — build and maintain a wiki of linked markdown notes using the
   LLM Wiki pattern. Research topics via web search, ingest sources (URLs, PDFs, files),
   and lint the wiki for consistency. Also includes lab notes, paper generation,
-  repo documentation, and autonomous research loops.
-  Use when user says /gt-research, /gt-lab-notes, /gt-gen-paper, /gt-repo-docs,
-  or /gt-supercharge.
+  and repo documentation.
+  Use when user says /gt-research, /gt-lab-notes, /gt-gen-paper, or /gt-repo-docs.
 license: MIT
 metadata:
   author: 42euge
-  version: "0.2.0"
+  version: "0.3.0"
 ---
 
 # geno-research
@@ -28,4 +27,3 @@ using the [Karpathy LLM Wiki pattern](https://gist.github.com/karpathy/442a6bf55
 | `/gt-lab-notes <subcommand>` | Project lab notes: tasks, timestamped notes, plans |
 | `/gt-gen-paper [focus]` | Generate academic paper from findings |
 | `/gt-repo-docs [focus]` | Generate purpose-driven repo documentation |
-| `/gt-supercharge [duration]` | Long-running autonomous agent loop |
