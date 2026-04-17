@@ -1,0 +1,6 @@
+role: research-agent
+description: Research toolkit — knowledge graphs, lab notes, paper generation, autonomous research
+capabilities:
+  - research
+  - documentation
+  - writing
