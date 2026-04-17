@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>geno-research</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: #0a0a0f;
+      color: #e0e0e8;
+      font-family: 'SF Mono', 'Fira Code', 'JetBrains Mono', 'Cascadia Code', monospace;
+      line-height: 1.7;
+      padding: 2rem 1.5rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    a { color: #8B5CF6; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .header {
+      border-bottom: 1px solid #1e1e2e;
+      padding-bottom: 2rem;
+      margin-bottom: 2.5rem;
+    }
+    .header h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 0.5rem;
+    }
+    .header h1 span { color: #8B5CF6; }
+    .header p {
+      font-size: 0.95rem;
+      color: #9090a0;
+    }
+
+    section {
+      margin-bottom: 2.5rem;
+    }
+    h2 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #8B5CF6;
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.85rem;
+    }
+    th {
+      text-align: left;
+      color: #6060708;
+      font-weight: 500;
+      padding: 0.5rem 0.75rem;
+      border-bottom: 1px solid #1e1e2e;
+      color: #707080;
+    }
+    td {
+      padding: 0.6rem 0.75rem;
+      border-bottom: 1px solid #14141e;
+    }
+    td code {
+      background: #16161e;
+      color: #c4b5fd;
+      padding: 0.15rem 0.4rem;
+      border-radius: 4px;
+      font-size: 0.82rem;
+    }
+    td:last-child { color: #9090a0; }
+
+    .install-block {
+      background: #12121a;
+      border: 1px solid #1e1e2e;
+      border-radius: 8px;
+      padding: 1.25rem 1.5rem;
+      font-size: 0.85rem;
+      overflow-x: auto;
+    }
+    .install-block .comment { color: #505060; }
+    .install-block .cmd { color: #e0e0e8; }
+    .install-block .alt { color: #606070; margin-top: 1rem; display: block; }
+
+    .ecosystem {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0.5rem;
+    }
+    .ecosystem a {
+      display: block;
+      background: #12121a;
+      border: 1px solid #1e1e2e;
+      border-radius: 6px;
+      padding: 0.75rem 1rem;
+      transition: border-color 0.2s;
+      font-size: 0.85rem;
+    }
+    .ecosystem a:hover {
+      border-color: #8B5CF6;
+      text-decoration: none;
+    }
+    .ecosystem .name { color: #fff; font-weight: 600; }
+    .ecosystem .desc { color: #707080; margin-left: 0.5rem; }
+
+    footer {
+      border-top: 1px solid #1e1e2e;
+      padding-top: 1.5rem;
+      color: #404050;
+      font-size: 0.8rem;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <h1><span>&gt;</span> geno-research</h1>
+    <p>Research skills for Claude Code. Deep research workflows, lab notes, paper generation, documentation, and autonomous research loops.</p>
+  </div>
+
+  <section>
+    <h2>Commands</h2>
+    <table>
+      <thead>
+        <tr><th>Command</th><th>Description</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>/gt-research &lt;brief&gt;</code></td>
+          <td>Deep research with multi-resolution Obsidian knowledge graphs (L0-L3 notes, literature review, canvas)</td>
+        </tr>
+        <tr>
+          <td><code>/gt-lab-notes &lt;subcommand&gt;</code></td>
+          <td>Project lab notes: create, add-task, do-task, done-task, note</td>
+        </tr>
+        <tr>
+          <td><code>/gt-gen-paper [focus]</code></td>
+          <td>Generate academic paper from benchmark findings</td>
+        </tr>
+        <tr>
+          <td><code>/gt-repo-docs [focus]</code></td>
+          <td>Generate purpose-driven repo documentation</td>
+        </tr>
+        <tr>
+          <td><code>/gt-supercharge [duration]</code></td>
+          <td>Long-running autonomous agent loop with structured cycles</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>Install</h2>
+    <div class="install-block">
+      <span class="comment"># Direct install</span><br>
+      <span class="cmd">./install.sh</span>
+      <span class="alt">
+        <span class="comment"># Or via geno-tools ecosystem installer</span><br>
+        <span class="cmd">cd ../geno-tools && ./install.sh</span>
+      </span>
+    </div>
+  </section>
+
+  <section>
+    <h2>Ecosystem</h2>
+    <div class="ecosystem">
+      <a href="https://github.com/42euge/geno-tools">
+        <span class="name">geno-tools</span>
+        <span class="desc">-- orchestrator + general tools</span>
+      </a>
+      <a href="https://github.com/42euge/geno-kaggle">
+        <span class="name">geno-kaggle</span>
+        <span class="desc">-- Kaggle benchmarking</span>
+      </a>
+      <a href="https://github.com/42euge/geno-media">
+        <span class="name">geno-media</span>
+        <span class="desc">-- media creation (audiobooks, video)</span>
+      </a>
+      <a href="https://github.com/42euge/geno-research">
+        <span class="name">geno-research</span>
+        <span class="desc">-- research workflows (this repo)</span>
+      </a>
+    </div>
+  </section>
+
+  <footer>
+    MIT License &middot; <a href="https://github.com/42euge/geno-research">GitHub</a>
+  </footer>
+
+</body>
+</html>
