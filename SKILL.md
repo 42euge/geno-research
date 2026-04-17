@@ -4,13 +4,13 @@ description: >-
   Research toolkit — build and maintain a wiki of linked markdown notes using the
   LLM Wiki pattern. Research topics via web search, ingest sources (URLs, PDFs, files),
   and lint the wiki for consistency. Includes lab notes, paper generation,
-  repo documentation, and long-running autonomous research loops.
+  and repo documentation.
   Use when user says /gt-research, /gt-research-notes, /gt-research-paper-generate,
-  /gt-research-repo-docs, or /gt-research-supercharge.
+  or /gt-research-repo-docs.
 license: MIT
 metadata:
   author: 42euge
-  version: "0.3.0"
+  version: "0.4.0"
 ---
 
 # geno-research
@@ -32,9 +32,7 @@ geno-tools install research
 | `/gt-research-notes <subcommand>` | Project lab notes: tasks, timestamped notes, plans |
 | `/gt-research-paper-generate [focus]` | Generate an academic paper from findings |
 | `/gt-research-repo-docs [focus]` | Generate purpose-driven repo documentation |
-| `/gt-research-supercharge [duration]` | Long-running autonomous agent loop for benchmarks |
 
 ## Runtime
 
-No venv or scripts — all commands are pure markdown workflows. The only persistent runtime state is:
-- `~/.geno-tools/geno-research/configs/supercharge/state.json` — cross-session memory for the supercharge loop (preserved across `geno-tools update`).
+No venv or scripts — all commands are pure markdown workflows.
