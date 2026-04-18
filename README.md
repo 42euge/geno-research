@@ -20,10 +20,11 @@ geno-tools dev research /path/to/local/checkout   # for local dev
 | `/gt-research <topic>` | Research a topic — web search, create/update wiki pages with `[[wikilinks]]` |
 | `/gt-research ingest <url-or-file>` | Ingest a source into the wiki (URL, PDF, file) |
 | `/gt-research lint` | Check wiki health — broken links, orphans, contradictions |
-| `/gt-research-notes <subcommand>` | Project lab notes: `create`, `add-task`, `do-task`, `done-task`, `note` |
 | `/gt-research-paper-generate [focus]` | Generate academic paper from findings |
 | `/gt-research-repo-docs [focus]` | Generate purpose-driven repo documentation |
 | `/gt-research-supercharge [duration]` | Long-running autonomous agent loop with structured cycles |
+
+Project tasks and journal have moved to the [`geno-notes`](https://github.com/42euge/geno-notes) repo — use `/gt-notes`.
 
 ## Wiki structure
 

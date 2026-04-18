@@ -30,8 +30,10 @@ Read these sources **in parallel** to build the complete picture:
 - Parse results to build tables: accuracy by model × noise_type × noise_ratio, vigilance accuracy by model × task_type × position
 
 **Documentation & context:**
-- `geno-tools/labnotes/notes.md` — development history, bug discoveries, key findings, version evolution
-- `geno-tools/labnotes/tasks.md` — what was planned vs completed
+- Project tasks and journal via `geno-notes` (scope auto-resolves — project if one exists, else global):
+  - `geno-notes list --json --all` — planned vs completed tasks (add `--all` to union project + global)
+  - `$(geno-notes path)/journal/**/*.md` — development history, bug discoveries, key findings; entries tagged by kind (note/finding/decision/bug/milestone)
+  - `geno-notes search <term> --all` — pull findings across related repos when synthesizing cross-project narrative
 - `geno-tools/docs/` — existing documentation
 - `CLAUDE.md` — project context and track description
 - `README.md` — project overview

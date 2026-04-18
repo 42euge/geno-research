@@ -21,9 +21,12 @@ Read these sources in parallel to build a complete picture:
 - `README.md` — existing readme if any
 - `requirements.txt` / `pyproject.toml` / `package.json` — dependencies
 - Browse `src/`, `notebooks/`, `data/`, `tests/` and other key directories
-- `geno-tools/labnotes/tasks.md` — current and completed tasks
-- `geno-tools/labnotes/notes.md` — development history and decisions
-- `geno-tools/labnotes/plans/` — design plans
+- Project tasks and journal via `geno-notes` (defaults to project scope; falls back to global if none):
+  - `geno-notes list --json` — all tasks with status, dates, tags
+  - `geno-notes search <topic>` — find relevant journal entries + plans
+  - `$(geno-notes path)/journal/` — timestamped development log (one .md + .jsonl per month)
+  - `$(geno-notes path)/plans/` — per-task design plans
+  - Use `--all` on `list` or `search` to include global-scope entries when synthesizing across projects
 - Recent git log (last 20-30 commits) for development trajectory
 
 **Research context (blend in from /gt-research outputs):**
@@ -104,7 +107,7 @@ Reference parent project context.}
 
 ## Current Status
 
-{What's working, what's in progress, what's planned. Pull from tasks.md and notes.md.}
+{What's working, what's in progress, what's planned. Pull from `geno-notes list --json` (by status) and recent journal entries.}
 ```
 
 #### `STRUCTURE.md` — Codebase Map
