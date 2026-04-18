@@ -1,0 +1,9 @@
+name: geno-research
+version: 0.3.0
+description: Research wiki, lab notes, paper generation, repo docs, supercharge loop
+
+# No venv, runtime, or config defaults — all commands are pure markdown workflows.
+# (Supercharge state.json is created lazily at first run.)
+
+commands:
+  source: commands/

@@ -30,7 +30,7 @@ Map the requested duration to cycle counts. Each cycle is ~30 minutes of wall ti
 - **Session log:** `geno-tools/supercharge/sessions/<timestamp>/session.md` — running log of what happened
 - **Checkpoints:** `geno-tools/supercharge/sessions/<timestamp>/checkpoints/` — state snapshots between cycles
 - **Artifacts:** `geno-tools/supercharge/sessions/<timestamp>/artifacts/` — generated files, analysis, etc.
-- **Global state:** `~/.genotools/supercharge/state.json` — cross-session memory (what worked, what didn't)
+- **Global state:** `~/.geno-tools/geno-research/configs/supercharge/state.json` — cross-session memory (what worked, what didn't)
 
 ## Architecture
 
@@ -116,7 +116,7 @@ For each cycle (1 to N):
 
 After all cycles or early stop:
 1. Write final summary to `session.md`
-2. Write final state to `~/.genotools/supercharge/state.json`
+2. Write final state to `~/.geno-tools/geno-research/configs/supercharge/state.json`
 3. Report to user what was accomplished
 
 ## Checkpoint Format
