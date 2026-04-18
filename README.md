@@ -4,17 +4,26 @@ Research skills for [Claude Code](https://docs.anthropic.com/en/docs/claude-code
 
 The LLM maintains an evolving, cross-referenced knowledge base rather than producing one-off summaries. Knowledge accumulates and becomes increasingly interconnected.
 
+Part of the [geno-tools](https://github.com/42euge/geno-tools) ecosystem.
+
+## Install
+
+```bash
+geno-tools install research                       # from registry
+geno-tools dev research /path/to/local/checkout   # for local dev
+```
+
 ## Commands
 
 | Command | Description |
-|---------|-------------|
+|---|---|
 | `/gt-research <topic>` | Research a topic — web search, create/update wiki pages with `[[wikilinks]]` |
 | `/gt-research ingest <url-or-file>` | Ingest a source into the wiki (URL, PDF, file) |
 | `/gt-research lint` | Check wiki health — broken links, orphans, contradictions |
-| `/gt-lab-notes <subcommand>` | Project lab notes: `create`, `add-task`, `do-task`, `done-task`, `note` |
-| `/gt-gen-paper [focus]` | Generate academic paper from findings |
-| `/gt-repo-docs [focus]` | Generate purpose-driven repo documentation |
-| `/gt-supercharge [duration]` | Long-running autonomous agent loop with structured cycles |
+| `/gt-research-notes <subcommand>` | Project lab notes: `create`, `add-task`, `do-task`, `done-task`, `note` |
+| `/gt-research-paper-generate [focus]` | Generate academic paper from findings |
+| `/gt-research-repo-docs [focus]` | Generate purpose-driven repo documentation |
+| `/gt-research-supercharge [duration]` | Long-running autonomous agent loop with structured cycles |
 
 ## Wiki structure
 
@@ -25,22 +34,20 @@ research/
 └── wiki/             # LLM-maintained pages with [[wikilinks]]
 ```
 
-## Install
+## Repository structure
 
-```bash
-./install.sh
+```
+geno-research/
+├── SKILL.md              # umbrella (discovered by geno-tools)
+├── genotools.yaml        # install manifest (no venv, pure markdown)
+└── commands/             # slash-command .md files
+    └── gt-research*.md
 ```
 
-Or install via geno-tools ecosystem installer:
-```bash
-cd ../geno-tools && ./install.sh
-```
+## Runtime
 
-## Part of the geno ecosystem
-
-- [geno-tools](https://github.com/42euge/geno-tools) — orchestrator + general tools
-- [geno-kaggle](https://github.com/42euge/geno-kaggle) — Kaggle benchmarking
-- [geno-media](https://github.com/42euge/geno-media) — media creation (audiobooks, video)
+No venv, no scripts. The only persistent state written at runtime:
+- `~/.geno-tools/geno-research/configs/supercharge/state.json` — supercharge cross-session memory (created lazily).
 
 ## License
 
