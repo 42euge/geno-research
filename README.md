@@ -22,7 +22,6 @@ geno-tools dev research /path/to/local/checkout   # for local dev
 | `/gt-research lint` | Check wiki health — broken links, orphans, contradictions |
 | `/gt-research-paper-generate [focus]` | Generate academic paper from findings |
 | `/gt-research-repo-docs [focus]` | Generate purpose-driven repo documentation |
-| `/gt-research-supercharge [duration]` | Long-running autonomous agent loop with structured cycles |
 
 Project tasks and journal have moved to the [`geno-notes`](https://github.com/42euge/geno-notes) repo — use `/gt-notes`.
 
@@ -47,8 +46,7 @@ geno-research/
 
 ## Runtime
 
-No venv, no scripts. The only persistent state written at runtime:
-- `~/.geno-tools/geno-research/configs/supercharge/state.json` — supercharge cross-session memory (created lazily).
+No venv, no scripts — all commands are pure markdown workflows.
 
 ## License
 

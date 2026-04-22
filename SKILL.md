@@ -3,15 +3,13 @@ name: geno-research
 description: >-
   Research toolkit — build and maintain a wiki of linked markdown notes using the
   LLM Wiki pattern. Research topics via web search, ingest sources (URLs, PDFs, files),
-  and lint the wiki for consistency. Includes paper generation, repo documentation,
-  and long-running autonomous research loops.
+  and lint the wiki for consistency. Includes paper generation and repo documentation.
   Project journal / tasks / notes moved to the geno-notes repo — use /gt-notes.
-  Use when user says /gt-research, /gt-research-paper-generate, /gt-research-repo-docs,
-  or /gt-research-supercharge.
+  Use when user says /gt-research, /gt-research-paper-generate, or /gt-research-repo-docs.
 license: MIT
 metadata:
   author: 42euge
-  version: "0.3.0"
+  version: "0.4.0"
 ---
 
 # geno-research
@@ -32,11 +30,9 @@ geno-tools install research
 | `/gt-research lint` | Check wiki health — broken links, orphans, contradictions |
 | `/gt-research-paper-generate [focus]` | Generate an academic paper from findings |
 | `/gt-research-repo-docs [focus]` | Generate purpose-driven repo documentation |
-| `/gt-research-supercharge [duration]` | Long-running autonomous agent loop for benchmarks |
 
 Project tasks and journal have moved out of this repo. Use [`/gt-notes`](https://github.com/42euge/geno-notes) (from the `geno-notes` repo) for task management and timestamped journal entries.
 
 ## Runtime
 
-No venv or scripts — all commands are pure markdown workflows. The only persistent runtime state is:
-- `~/.geno-tools/geno-research/configs/supercharge/state.json` — cross-session memory for the supercharge loop (preserved across `geno-tools update`).
+No venv or scripts — all commands are pure markdown workflows.
