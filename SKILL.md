@@ -3,10 +3,9 @@ name: geno-research
 description: >-
   Research toolkit — build and maintain a wiki of linked markdown notes using the
   LLM Wiki pattern. Research topics via web search, ingest sources (URLs, PDFs, files),
-  and lint the wiki for consistency. Includes lab notes, paper generation,
-  and repo documentation.
-  Use when user says /gt-research, /gt-research-notes, /gt-research-paper-generate,
-  or /gt-research-repo-docs.
+  and lint the wiki for consistency. Includes paper generation and repo documentation.
+  Project journal / tasks / notes moved to the geno-notes repo — use /gt-notes.
+  Use when user says /gt-research, /gt-research-paper-generate, or /gt-research-repo-docs.
 license: MIT
 metadata:
   author: 42euge
@@ -29,9 +28,10 @@ geno-tools install research
 | `/gt-research <topic>` | Research a topic and build/update a wiki of linked markdown notes |
 | `/gt-research ingest <url-or-file>` | Ingest a source into the wiki |
 | `/gt-research lint` | Check wiki health — broken links, orphans, contradictions |
-| `/gt-research-notes <subcommand>` | Project lab notes: tasks, timestamped notes, plans |
 | `/gt-research-paper-generate [focus]` | Generate an academic paper from findings |
 | `/gt-research-repo-docs [focus]` | Generate purpose-driven repo documentation |
+
+Project tasks and journal have moved out of this repo. Use [`/gt-notes`](https://github.com/42euge/geno-notes) (from the `geno-notes` repo) for task management and timestamped journal entries.
 
 ## Runtime
 
