@@ -1,0 +1,49 @@
+# Two sources fan in, then dedup + format. Demonstrates parallel branches
+# (load_jsonl and load_csv run concurrently when --workers > 1).
+name: multi_source
+
+nodes:
+  - id: load_jsonl
+    transform: load_jsonl
+    params:
+      path: examples/data/raw.jsonl
+
+  - id: load_csv
+    transform: load_csv
+    params:
+      path: examples/data/extra.csv
+
+  - id: clean_jsonl
+    transform: filter_records
+    deps: [load_jsonl]
+    params:
+      where: "len(record.get('text', '')) >= 10"
+
+  - id: clean_csv
+    transform: filter_records
+    deps: [load_csv]
+    params:
+      where: "len(record.get('text', '')) >= 10"
+
+  - id: merged
+    transform: concat
+    deps: [clean_jsonl, clean_csv]
+
+  - id: dedup
+    transform: deduplicate_normalized
+    deps: [merged]
+    params:
+      field: text
+
+  - id: format
+    transform: format_template
+    deps: [dedup]
+    params:
+      template: "Question: {text}"
+      output_field: prompt
+
+  - id: write
+    transform: write_jsonl
+    deps: [format]
+    params:
+      path: out/merged.jsonl

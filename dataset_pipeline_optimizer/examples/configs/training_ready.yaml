@@ -1,0 +1,56 @@
+# raw -> cleaned -> formatted -> training-ready
+name: training_ready
+
+nodes:
+  - id: load_raw
+    transform: load_jsonl
+    params:
+      path: examples/data/raw.jsonl
+
+  - id: strip_text
+    transform: strip_field
+    deps: [load_raw]
+    params:
+      field: text
+
+  - id: drop_short
+    transform: filter_records
+    deps: [strip_text]
+    params:
+      where: "len(record.get('text', '')) >= 10"
+
+  - id: dedup
+    transform: deduplicate_normalized
+    deps: [drop_short]
+    params:
+      field: text
+      lowercase: true
+      strip_punct: true
+
+  - id: format
+    transform: format_chat
+    deps: [dedup]
+    params:
+      prompt_field: text
+      role: user
+      system: "You are a helpful assistant."
+
+  - id: validate
+    transform: validate_schema
+    deps: [format]
+    params:
+      required: [messages]
+      types:
+        messages: list
+
+  - id: assert_size
+    transform: assert_min_count
+    deps: [validate]
+    params:
+      min_count: 1
+
+  - id: write
+    transform: write_jsonl
+    deps: [assert_size]
+    params:
+      path: out/training.jsonl
