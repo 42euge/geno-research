@@ -1,0 +1,28 @@
+# Alert rules for the reward monitoring dashboard.
+#
+# Top-level keys are run IDs; the special key "*" applies to every run. Each
+# rule names a metric, a comparison op, and a threshold. Available metrics:
+#   mean, std, min, max, median, drift_delta, drift_normalized, anomaly_count
+#
+# Comparison ops: lt | lte | gt | gte
+# Severity: warning | critical (purely informational; controls UI styling).
+
+"*":
+  - name: low_mean_reward
+    metric: mean
+    op: lt
+    threshold: 0.0
+    severity: critical
+    message: "Run mean reward dropped below 0 — likely model regression."
+  - name: high_anomaly_count
+    metric: anomaly_count
+    op: gt
+    threshold: 5
+    severity: warning
+    message: "More than 5 reward anomalies detected; investigate the trace."
+  - name: catastrophic_drift
+    metric: drift_normalized
+    op: lt
+    threshold: -1.0
+    severity: critical
+    message: "Late-run reward is more than 1σ below early-run; possible collapse."

@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Reward Monitoring Dashboard</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <header>
+    <h1>Reward Monitoring Dashboard</h1>
+    <nav>
+      <a href="/runs">Runs</a>
+      <a href="/compare">Compare</a>
+    </nav>
+  </header>
+  <main>
+    <section>
+      <h2>Training runs</h2>
+      <p class="hint">Click a run to drill into per-step rewards, distributions, and anomalies.</p>
+      <table id="runs-table">
+        <thead>
+          <tr>
+            <th>Run</th><th>Created</th><th>Samples</th>
+            <th>Mean reward</th><th>Std</th><th>Min / Max</th><th>Alerts</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+      <p id="empty-state" class="hint" hidden>
+        No runs ingested yet. Use <code>python -m reward_monitoring_dashboard.cli.ingest_run_logs</code>.
+      </p>
+    </section>
+  </main>
+  <script src="/static/app.js"></script>
+  <script>RewardDashboard.renderRunsList();</script>
+</body>
+</html>

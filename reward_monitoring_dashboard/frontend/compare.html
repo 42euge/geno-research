@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Compare Runs · Reward Monitoring</title>
+  <link rel="stylesheet" href="/static/style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Compare runs</h1>
+    <nav><a href="/runs">← All runs</a></nav>
+  </header>
+  <main>
+    <section>
+      <p class="hint">Select two or more runs to overlay their reward curves and headline stats.</p>
+      <form id="compare-form">
+        <div id="run-checkboxes" class="checkbox-list"></div>
+        <button type="submit">Compare</button>
+      </form>
+    </section>
+    <section id="compare-results" hidden>
+      <h2>Reward over time</h2>
+      <canvas id="compare-chart" height="120"></canvas>
+      <h2>Headline metrics</h2>
+      <table id="compare-table">
+        <thead>
+          <tr><th>Run</th><th>Count</th><th>Mean</th><th>Std</th><th>Drift Δ</th><th>Drift / σ</th></tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+  </main>
+  <script src="/static/app.js"></script>
+  <script>RewardDashboard.renderComparePage();</script>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Run Detail · Reward Monitoring</title>
+  <link rel="stylesheet" href="/static/style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+</head>
+<body>
+  <header>
+    <h1 id="run-title">Run</h1>
+    <nav>
+      <a href="/runs">← All runs</a>
+      <a href="/compare">Compare</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="alerts-section" hidden>
+      <h2>Alerts</h2>
+      <ul id="alerts-list"></ul>
+    </section>
+
+    <section>
+      <h2>Headline metrics</h2>
+      <div id="summary-grid" class="grid"></div>
+    </section>
+
+    <section>
+      <h2>Reward over time</h2>
+      <p class="hint">Per-step reward (light) with a rolling mean envelope (dark).
+        Anomalies are marked.</p>
+      <canvas id="series-chart" height="120"></canvas>
+    </section>
+
+    <section class="row">
+      <div class="col">
+        <h2>Reward distribution</h2>
+        <canvas id="dist-chart" height="180"></canvas>
+      </div>
+      <div class="col">
+        <h2>Reward vs. output length</h2>
+        <p class="hint" id="length-corr-label"></p>
+        <canvas id="length-chart" height="180"></canvas>
+      </div>
+    </section>
+
+    <section>
+      <h2>By task type</h2>
+      <table id="task-table">
+        <thead>
+          <tr>
+            <th>Task</th><th>Count</th><th>Mean</th><th>Std</th>
+            <th>Min</th><th>Median</th><th>Max</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>Anomalies</h2>
+      <table id="anomalies-table">
+        <thead>
+          <tr><th>Step</th><th>Reward</th><th>Z-score</th><th>Direction</th><th>Task</th><th></th></tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>Samples</h2>
+      <div class="controls">
+        <label>Sort by
+          <select id="sort-by">
+            <option value="step">Step</option>
+            <option value="reward">Reward</option>
+            <option value="output_length">Output length</option>
+            <option value="timestamp">Timestamp</option>
+          </select>
+        </label>
+        <label><input type="checkbox" id="sort-desc" /> Descending</label>
+        <button id="prev-page">← Prev</button>
+        <span id="page-info"></span>
+        <button id="next-page">Next →</button>
+      </div>
+      <table id="samples-table">
+        <thead>
+          <tr><th>Step</th><th>Reward</th><th>Length</th><th>Task</th><th>Prompt</th></tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+
+    <section id="sample-detail" hidden>
+      <h2>Sample detail</h2>
+      <dl id="sample-fields"></dl>
+      <h3>Prompt</h3>
+      <pre id="sample-prompt"></pre>
+      <h3>Output</h3>
+      <pre id="sample-output"></pre>
+    </section>
+  </main>
+
+  <script src="/static/app.js"></script>
+  <script>RewardDashboard.renderRunDetail();</script>
+</body>
+</html>
