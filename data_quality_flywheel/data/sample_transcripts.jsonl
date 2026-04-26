@@ -1,0 +1,12 @@
+{"id": "t001", "prompt": "What is the capital of France?", "response": "The capital of France is Paris.", "reward": 0.9}
+{"id": "t002", "prompt": "What is the capital of France?", "response": "Paris is the capital of France.", "reward": 0.85}
+{"id": "t003", "prompt": "Explain photosynthesis briefly.", "response": "Photosynthesis is the process by which plants convert sunlight, water, and carbon dioxide into glucose and oxygen using chlorophyll in their chloroplasts.", "reward": 0.95}
+{"id": "t004", "prompt": "What's 2+2?", "response": "I don't know.", "reward": -0.5}
+{"id": "t005", "prompt": "?", "response": "Maybe. I think it depends. Possibly yes, possibly no.", "reward": -0.2}
+{"id": "t006", "prompt": "Is the sky blue?", "response": "Yes, the sky appears blue due to Rayleigh scattering of sunlight.", "reward": 0.9}
+{"id": "t007", "prompt": "Is the sky blue?", "response": "No, the sky is not blue, it is actually green.", "reward": -0.9}
+{"id": "t008", "prompt": "Write a short poem about the moon.", "response": "Silver light upon the night, moon so calm and pure and bright; ancient eye that watches still, casting peace from its high hill.", "reward": 0.8}
+{"id": "t009", "prompt": "What does HTTP stand for?", "response": "HTTP HTTP HTTP HTTP HTTP HTTP HTTP HTTP HTTP HTTP HTTP HTTP HTTP", "reward": -0.7}
+{"id": "t010", "prompt": "Recommend a good book? Why is it good? What genre?", "response": "Maybe try a novel. It depends on what you like. Perhaps fiction.", "reward": 0.0}
+{"id": "t011", "prompt": "Explain photosynthesis briefly.", "response": "Photosynthesis is the process by which plants convert sunlight water and carbon dioxide into glucose and oxygen using chlorophyll in their chloroplasts.", "reward": 0.9}
+{"id": "t012", "prompt": "List three primary colors.", "response": "The three primary colors are red, blue, and yellow.", "reward": 0.95}
