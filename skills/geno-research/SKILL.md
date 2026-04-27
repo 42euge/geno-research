@@ -1,4 +1,18 @@
-# Research
+---
+name: geno-research
+description: >-
+  Research toolkit — build and maintain a wiki of linked markdown notes using the
+  LLM Wiki pattern. Research topics via web search, ingest sources (URLs, PDFs, files),
+  and lint the wiki for consistency. Includes paper generation and repo documentation.
+  Use when user says /geno-research, /geno-research-papers-generate, or /geno-research-repos-document.
+allowed-tools: "Bash(*) Read(*) Edit(*) Write(*) WebSearch(*) WebFetch(*)"
+license: MIT
+metadata:
+  author: 42euge
+  version: "0.4.0"
+---
+
+# geno-research
 
 Research a topic and build a wiki of linked markdown notes. Based on the [Karpathy LLM Wiki pattern](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f) — the LLM maintains an evolving, cross-referenced knowledge base rather than producing one-off summaries.
 
@@ -70,3 +84,10 @@ When `$ARGUMENTS` is `lint`:
 - **No rigid format** — let the content dictate structure. A paper summary looks different from a concept explanation or a comparison table
 - **Human-readable filenames** — spaces OK, avoid special chars except dashes
 - **Obsidian-compatible** — standard markdown with `[[wikilinks]]` and optional `#tags`
+
+## Available sub-skills
+
+| Sub-skill | Description |
+|-----------|-------------|
+| `/geno-research-papers-generate` | Generate an academic paper from findings |
+| `/geno-research-repos-document` | Generate purpose-driven repo documentation |
