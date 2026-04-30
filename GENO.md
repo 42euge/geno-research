@@ -45,6 +45,8 @@ geno-research/
 - **Link aggressively** — every concept that has or could have its own page gets a `[[wikilink]]`
 - **Obsidian-compatible** — standard markdown with `[[wikilinks]]` and optional `#tags`
 - **Sources matter** — cite papers (arXiv IDs), URLs, or other references
+- **Prefix aliasing** — slash commands use the canonical `geno-` prefix in source (e.g., `/geno-research`). Short `/gt-` aliases are configured per-install via `~/.geno/config.yaml` and should never appear in source files or documentation.
+- **Adding new sub-skills** — create a new directory under `skills/` named after the skill (e.g., `skills/geno-research-<name>/`), write a `SKILL.md` with the required frontmatter (`name`, `description`, `slash_command`), and add the skill to the Skills table in this file.
 
 ## Runtime
 
