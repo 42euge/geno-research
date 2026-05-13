@@ -1,6 +1,6 @@
 site_name: geno-research
-site_description: Research wiki, paper generation, repo docs
-site_url: https://42euge.github.io/geno-research
+site_description: Research wiki, paper generation, repo documentation
+site_url: https://42euge.github.io/geno-research/
 repo_url: https://github.com/42euge/geno-research
 repo_name: 42euge/geno-research
 
@@ -27,15 +27,22 @@ theme:
   icon:
     repo: fontawesome/brands/github
   features:
+    - navigation.tabs
+    - navigation.tabs.sticky
     - navigation.sections
     - navigation.top
     - content.code.copy
+    - content.code.annotate
     - search.highlight
+    - search.suggest
     - toc.follow
 
 nav:
   - Home: index.md
   - Getting Started: getting-started.md
+
+extra_css:
+  - stylesheets/extra.css
 
 markdown_extensions:
   - admonition
@@ -47,5 +54,13 @@ markdown_extensions:
   - pymdownx.tabbed:
       alternate_style: true
   - attr_list
+  - md_in_html
+  - def_list
   - toc:
       permalink: true
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/42euge
+  generator: false
