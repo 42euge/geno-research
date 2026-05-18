@@ -59,7 +59,7 @@ Read these sources in parallel to build a complete picture:
   - Use `--all` on `list` or `search` to include global-scope entries when synthesizing across projects
 - Recent git log (last 20-30 commits) for development trajectory
 
-**Research context (blend in from /gt-research outputs):**
+**Research context (blend in from /geno-research outputs):**
 - Check for a `research/` folder in the repo OR in parent directories (walk up to 3 levels)
 - If found, read:
   - The root `Research Overview.md` for overall framing
