@@ -1,3 +1,15 @@
+---
+name: geno-research-repo-docs
+description: >-
+  Generate purpose-driven repository documentation that captures what we're trying
+  to achieve, design decisions, and how the repo fits into the broader research context.
+allowed-tools: "Bash(find *) Read(*)"
+license: MIT
+metadata:
+  author: 42euge
+  version: "0.4.0"
+---
+
 # Repo Docs — Purpose-Driven Documentation
 
 Generate documentation about the current repository in `geno-tools/docs/`. This is NOT just a "how to run it" guide — it captures **what we're trying to achieve**, the reasoning behind design decisions, and how this repo fits into the broader research context.
@@ -29,7 +41,7 @@ Read these sources in parallel to build a complete picture:
   - Use `--all` on `list` or `search` to include global-scope entries when synthesizing across projects
 - Recent git log (last 20-30 commits) for development trajectory
 
-**Research context (blend in from /gt-research outputs):**
+**Research context (blend in from /geno-research outputs):**
 - Check for a `research/` folder in the repo OR in parent directories (walk up to 3 levels)
 - If found, read:
   - The root `Research Overview.md` for overall framing
@@ -86,7 +98,7 @@ Use analogies and intuitions, not just definitions.}
 Include a simple ASCII diagram if helpful:}
 
 ```
-input → [component A] → [component B] → output
+input -> [component A] -> [component B] -> output
 ```
 
 ## Design Decisions

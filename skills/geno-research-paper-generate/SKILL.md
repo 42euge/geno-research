@@ -1,3 +1,15 @@
+---
+name: geno-research-paper-generate
+description: >-
+  Generate an academic paper (workshop / extended abstract style) from benchmark findings,
+  synthesizing code, results, lab notes, and development history.
+allowed-tools: "Bash(find *) Read(*)"
+license: MIT
+metadata:
+  author: 42euge
+  version: "0.4.0"
+---
+
 # Generate Academic Paper
 
 Generate a short academic paper (workshop / extended abstract style) about findings from the current repository's benchmark. The paper synthesizes code, results, lab notes, and development history into a coherent research narrative.
@@ -27,7 +39,7 @@ Read these sources **in parallel** to build the complete picture:
 
 **Results:**
 - `results/` — all result directories. Read the `.run.json` files to extract actual numbers. Focus on the latest version (highest v-number).
-- Parse results to build tables: accuracy by model × noise_type × noise_ratio, vigilance accuracy by model × task_type × position
+- Parse results to build tables: accuracy by model x noise_type x noise_ratio, vigilance accuracy by model x task_type x position
 
 **Documentation & context:**
 - Project tasks and journal via `geno-notes` (scope auto-resolves — project if one exists, else global):
@@ -105,13 +117,13 @@ Any preprocessing (think-tag stripping, preamble handling).]
 ## 3. Results
 
 ### 3.1 Signal-in-Noise Results
-[Main accuracy table: model × noise_type × noise_ratio.
+[Main accuracy table: model x noise_type x noise_ratio.
 Threshold table: the noise ratio where each model drops below 80%.
 Key observation: adversarial noise as the sole discriminator.
 The Gemma scaling ladder finding.]
 
 ### 3.2 Vigilance Results
-[Accuracy by model × task_type.
+[Accuracy by model x task_type.
 Oddball detection results.
 Notable anomalies and their explanations.]
 
@@ -127,7 +139,7 @@ Why does adversarial noise separate models when other noise types don't?
 What does this tell us about how LLMs process context?]
 
 ### 4.2 Scaling Laws for Attention
-[The Gemma 1b→4b→12b→27b progression.
+[The Gemma 1b->4b->12b->27b progression.
 Does attention scale predictably with model size?]
 
 ### 4.3 Reasoning Models and Attention
@@ -169,7 +181,7 @@ Implementation details. Example prompts.]
 Re-read the paper and check:
 - [ ] Every claim is supported by data from the results
 - [ ] Tables contain actual numbers (not placeholders)
-- [ ] The narrative flows logically from problem → method → results → insight
+- [ ] The narrative flows logically from problem -> method -> results -> insight
 - [ ] The writing is concise and precise (no filler)
 - [ ] Technical details are correct (noise ratios, model names, accuracy numbers)
 - [ ] The paper honestly addresses limitations

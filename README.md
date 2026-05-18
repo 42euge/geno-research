@@ -1,6 +1,6 @@
 # geno-research
 
-Research skills for [Claude Code](https://docs.anthropic.com/en/docs/claude-code). Build and maintain a wiki of linked markdown notes using the [Karpathy LLM Wiki pattern](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f).
+Research skills for AI coding agents. Build and maintain a wiki of linked markdown notes using the [Karpathy LLM Wiki pattern](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f).
 
 The LLM maintains an evolving, cross-referenced knowledge base rather than producing one-off summaries. Knowledge accumulates and becomes increasingly interconnected.
 
@@ -17,13 +17,13 @@ geno-tools dev research /path/to/local/checkout   # for local dev
 
 | Command | Description |
 |---|---|
-| `/gt-research <topic>` | Research a topic — web search, create/update wiki pages with `[[wikilinks]]` |
-| `/gt-research ingest <url-or-file>` | Ingest a source into the wiki (URL, PDF, file) |
-| `/gt-research lint` | Check wiki health — broken links, orphans, contradictions |
-| `/gt-research-paper-generate [focus]` | Generate academic paper from findings |
-| `/gt-research-repo-docs [focus]` | Generate purpose-driven repo documentation |
+| `/geno-research <topic>` | Research a topic — web search, create/update wiki pages with `[[wikilinks]]` |
+| `/geno-research ingest <url-or-file>` | Ingest a source into the wiki (URL, PDF, file) |
+| `/geno-research lint` | Check wiki health — broken links, orphans, contradictions |
+| `/geno-research-paper-generate [focus]` | Generate academic paper from findings |
+| `/geno-research-repo-docs [focus]` | Generate purpose-driven repo documentation |
 
-Project tasks and journal have moved to the [`geno-notes`](https://github.com/42euge/geno-notes) repo — use `/gt-notes`.
+Project tasks and journal have moved to the [`geno-notes`](https://github.com/42euge/geno-notes) repo — use `/geno-notes`.
 
 ## Wiki structure
 
@@ -38,10 +38,16 @@ research/
 
 ```
 geno-research/
-├── SKILL.md              # umbrella (discovered by geno-tools)
-├── genotools.yaml        # install manifest (no venv, pure markdown)
-└── commands/             # slash-command .md files
-    └── gt-research*.md
+├── GENO.md              # agent instructions (single source of truth)
+├── SKILL.md             # umbrella skill manifest
+├── genotools.yaml       # install manifest (no venv, pure markdown)
+└── skills/              # skill .md files
+    ├── geno-research/
+    │   └── SKILL.md
+    ├── geno-research-paper-generate/
+    │   └── SKILL.md
+    └── geno-research-repo-docs/
+        └── SKILL.md
 ```
 
 ## Runtime

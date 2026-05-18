@@ -5,4 +5,4 @@ description: Research wiki, paper generation, repo docs
 # No venv, runtime, or config defaults — all commands are pure markdown workflows.
 
 commands:
-  source: commands/
+  source: skills/
