@@ -7,8 +7,9 @@ Research toolkit for AI coding agents. Build and maintain a wiki of linked markd
 | Skill | Sub-skillset | Slash command |
 |-------|-------------|---------------|
 | geno-research | — | — (umbrella) |
-| geno-research-papers-generate | papers | /geno-research-papers-generate |
-| geno-research-repos-document | repos | /geno-research-repos-document |
+| geno-research-wiki | wiki | /geno-research-wiki |
+| geno-research-paper-generate | papers | /geno-research-paper-generate |
+| geno-research-repo-docs | repos | /geno-research-repo-docs |
 
 ### Umbrella commands
 
@@ -29,8 +30,9 @@ geno-research/
 ├── genotools.yaml       # geno-tools manifest
 ├── skills/              # skill definitions
 │   ├── geno-research/               # umbrella skill
-│   ├── geno-research-papers-generate/  # paper generation
-│   └── geno-research-repos-document/   # repo documentation
+│   ├── geno-research-wiki/              # wiki research
+│   ├── geno-research-paper-generate/    # paper generation
+│   └── geno-research-repo-docs/         # repo documentation
 ├── docs/                # MkDocs Material site
 │   ├── index.md
 │   └── getting-started.md
